@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #68B0AB;
+}
+.app-container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 365px;
+    height: 500px;
+    background: hsl(0, 0%, 100%);
+    border-radius: 30px 30px 120px 30px;
+}
+form {
+    height: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "d m y"
+    "di mi yi"
+    ;
+    padding: 30px 20px;
+}
+#dayL {
+    grid-area: d;
+}
+#day {
+    grid-area: di;
+}
+#monthL {
+    grid-area: m;
+}
+#month {
+    grid-area: mi;
+}
+#yearL {
+    grid-area: y;
+}
+#year {
+    grid-area: yi;
+}
+label {
+    letter-spacing: 2px;
+    color: #006A71;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+input {
+    width: 75px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid hsl(0, 0%, 86%);
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: #006A71;
+}
+input:focus {
+    outline: none;
+    border: 1px solid #FF7E67;
+}
+input::placeholder {
+    color: rgba(128, 128, 128, 0.344);
+}
+.btn-container {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 20px;
+    position: relative;
+}
+button {
+    border: none;
+    border-radius: 100px;
+    background: #FF7E67;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+button:active {
+    transform: scale(95%);
+}
+button:hover {
+    cursor: pointer;
+    background: #006A71;
+}
+button::before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 90px;
+    background: hsl(0, 0%, 86%);
+    transform: translateX(-75px);
+}
+button::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 90px;
+    background: hsl(0, 0%, 86%);
+    transform: translateX(75px);
+}
+.result-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    font-size: 3rem;
+    font-weight: 900;
+    font-style: italic;
+    color: #006A71;
+}
+.numbers {
+    color: #FF7E67;
+    margin-left: 30px;
+}
